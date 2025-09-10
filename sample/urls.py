@@ -29,7 +29,8 @@ BASE_DIR = settings.BASE_DIR
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-     path('contribution/', views.contribute_view, name='contribution'),
+    path('',TemplateView.as_view(template_name='index.html'), name='home'),
+    path('contribution/', views.contribute_view, name='contribution'),
     path('reviews/', views.review_page, name='reviews'),
     path('thank-you/', views.thank_you, name='thank_you'),
     path('index/', TemplateView.as_view(template_name='index.html'), name='home'),
